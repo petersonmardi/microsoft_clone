@@ -1,0 +1,44 @@
+@media only screen and (max-width: 1400px) {
+  .search, .cart, .user {display: none;}
+}
+
+@media only screen and (min-width: 860px) {
+  .trigger_menu {display: none;}
+}
+
+@media only screen and (max-width: 860px) {
+  .ms_nav li:nth-child(1), .ms_nav li:nth-child(2) {
+    display: none;
+  }
+
+  .logo {
+    position: absolute;
+    top: 16px;
+    left: calc(50% - 95px);
+  }
+
+  .nav_link {
+    display: none;
+  }
+
+  .trigger_menu {
+    margin-left: 10px;
+  }
+
+  .ms_nav li:last-child {
+    padding-right: 16px;
+  }
+
+  .cancel-btn, .searchBar {
+    display: none;
+  }
+
+  .viewport860 {
+    display: block;
+  }
+
+  .searchBar {
+    display: none;
+  }
+
+}

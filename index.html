@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es-D0">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Microsoft página principal</title>
+  <link rel="stylesheet" href="./static/css/all.min.css">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="stylesheet" href="./static/css/media_query.css">
+</head>
+
+<body>
+  <!-- <button type="button" name="button" class="">Subir</button> -->
+
+  <!-- <div id="page_top"></div> -->
+
+  <header class="flex_row text_center">
+    <div class="trigger_menu flex_row">
+      <button type="button" name="button" class="menu" id="menu"><i class="fa-solid fa-bars" style="padding-right: 1.6666px;"></i></button>
+      <button type="button" name="button" class="close" id="close"><i class="fa-solid fa-xmark" style="padding-right: 5px;"></i></button>
+      <button type="button" name="button" class="search_btn" id="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+
+    <div class="flex_row" id="navSectionA">
+      <div href="#" id="logo" class="logo flex_inline"><a href="#"><img src="./static/img/logo.png" alt="Microsoft" width="108" height="23"></a></div>
+
+      <ul class="flex_row list_style_none nav_link">
+        <li class="li_cont"><a href="#">Microsoft 365</a></li>
+        <li class="li_cont"><a href="#">Office</a></li>
+        <li class="li_cont"><a href="#">Windows</a></li>
+        <li class="li_cont"><a href="#">Xbox</a></li>
+        <li class="li_cont"><a href="#">Soporte</a></li>
+      </ul>
+    </div>
+
+    <div class="" id="navSectionB">
+      <ul class="ms_nav flex_row list_style_none">
+        <li class="li_cont dropdown btnBorder" id="msNav">
+          <button href="#" class="ms_btn flex_row" >
+            <span class="nav_element">Todo Microsoft</span>
+            <div class="">
+              <i class="fa-solid fa-caret-up caret_up" id="carretUp"></i>
+              <i class="fa-solid fa-caret-down caret_down" id="carretDown"></i>
+            </div>
+          </button>
+          <div id="myDropdown" class="myDropdown" style="display: none;">
+            <div class="dropdown_content flex_row">
+              <div class="">
+                <span>Software</span>
+                <a href="#">Aplicaciones</a>
+                <a href="#">OneDrive</a>
+                <a href="#">Outlook</a>
+                <a href="#">Skype</a>
+                <a href="#">OneNote</a>
+                <a href="#">Microsoft Teams</a>
+              </div>
+              <div class="">
+                <span>PCs & Device</span>
+                <a href="#">Comprar Xbox</a>
+              </div>
+              <div class="">
+                <span>Entretenimiento</span>
+                <a href="#">Xbox y juegos</a>
+                <a href="#">Juego para PC</a>
+                <a href="#">Juegos para Windows</a>
+              </div>
+              <div class="">
+                <span>Empresas</span>
+                <a href="#">Microsoft Cloud</a>
+                <a href="#">Seguridad de Microsoft</a>
+                <a href="#">Azure</a>
+                <a href="#">Dynamics 365</a>
+                <a href="#">Microsoft 365 para empresas</a>
+                <a href="#"> Microsoft Manufactura</a>
+                <a href="#">Microsoft Power Platform</a>
+                <a href="#">Windows 365</a>
+              </div>
+              <div class="">
+                <span>Desarrollador y TI</span>
+                <a href="#">Centro de desarrolladores</a>
+                <a href="#">Documentación</a>
+                <a href="#">Microsoft Learn</a>
+                <a href="#">Comunidad de Microsoft Tech</a>
+                <a href="#">Marketplace de Azure</a>
+                <a href="#">AppSource</a>
+                <a href="#">Visual Studio</a>
+              </div>
+              <div class="">
+                <span>Otros</span>
+                <a href="#">Seguridad y descargas gratuitas</a>
+                <a href="#">Educación</a>
+                <a href="#">Licenciamiento</a>
+              </div>
+            </div>
+            <div class="site">
+              <a href="#">VER MAPA DEL SITIO</a>
+            </div>
+          </div>
+        </li>
+        <li class="li_cont elementHover" id="searchBtn"><span class="nav_element search">Buscar</span><i class="fa-solid fa-magnifying-glass"></i></li>
+        <div class="glassHover">Busca en Microsoft.com</div>
+        <li class="li_cont elementHover"><a href="#" class=""><span class="nav_element cart">Carro</span><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <div class="cartHover">0 artículos en el carro de la compra</div>
+        <li class="li_cont"><a href="#" class=""><span class="nav_element user">Iniciar sesión</span><i class="fa-solid fa-circle-user"></i></a></li>
+      </ul>
+    </div>
+  </header>
+  <div id="hideSearchBtn" class="searchBar hide">
+    <div class="nav-search flex_row">
+      <i class="fa-solid fa-arrow-left arrow-left hide"></i>
+      <div class="search_cont flex_row">
+        <input type="search" name="" value="" placeholder=" Buscar en Microsoft.com">
+        <i class="fa-solid fa-magnifying-glass glass"></i>
+      </div>
+      <button class="cancel-btn" id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- <div id="" class="">
+    <div class="">
+      <a href="#">Microsoft 365</a>
+      <a href="#">Office</a>
+      <a href="#">Windows</a>
+      <a href="#">Xbox</a>
+      <a href="#">Soporte</a>
+    </div>
+
+    <div class="">
+      <div id="" class="">
+        <p>Software</p>
+        <div class="">
+          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+
+      <ul class="">
+        <li><a href="#">Aplicaciones para Windows</a></li>
+        <li><a href="#">OneDrive</a></li>
+        <li><a href="#">Outlook</a></li>
+        <li><a href="#">Skype</a></li>
+        <li><a href="#">OneNote</a></li>
+        <li><a href="#">Microsoft Teams</a></li>
+      </ul>
+    </div>
+  </div> -->
+
+  <picture>
+    <div class="">
+      <a href="#">
+        <img src="./static/img/Windows11_1920x600.jpeg" alt="Windows 11" class="" width="100%">
+      </a>
+    </div>
+    <div class="">
+      <h1 class="">Diseñado para la vida de hoy y de mañana</h1>
+      <div class="">
+        La nueva generación de juegos. tus objetivos. Familia y amigos.
+        Windows 11 está hecho para acercarte a todo lo que te encanta.
+      </div>
+      <div class=""><a href="#">Ve si tu PC está listo</a></div>
+    </div>
+  </picture>
+
+  <section class="section_a gallery">
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-m365-icons-7up-1668x940?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Microsoft 365</h1>
+      </div>
+      <div class="card_description">
+        Aplicaciones prémium de Office, almacenamiento adicional en la nube,
+        seguridad avanzada y mucho más, todo en una conveniente suscripción única.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Para 1 persona</a></li>
+          <li><a href="#">Hasta 6 personas</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Microsoft Edge</h1>
+      </div>
+      <div class="card_description">
+        Un rendimiento de categoría mundial con más privacidad, más
+        productividad y más valor mientras navegas.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Descargar ahora</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Microsoft OneDrive</h1>
+      </div>
+      <div class="card_description">
+        Guarda tus archivos y fotos en OneDrive y accede a ellos desde
+        cualquier dispositivo y en cualquier lugar.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Más información</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-PC-SMB-OneNote?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>OneNote</h1>
+      </div>
+      <div class="card_description">
+        Organiza tus notas y tu vida.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Más indormación</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <picture>
+    <div class="outlook">
+      <a href="#">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Hero-MSCOM-Outlook-iOS-Android:VP5-1596x600" alt="Windows 11">
+      </a>
+    </div>
+    <div class="text_wrapper">
+      <h1 class="title">Outlook para iOS y Android</h1>
+      <div class="description">
+        Conecta. Organiza. Haz las cosas.
+      </div>
+      <div class="link"><a href="#">Descargar ahora</a></div>
+    </div>
+  </picture>
+
+  <h1>Para la empresa</h1>
+  <section class="section_b gallery">
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/JIC-DPS-CP01?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Bienvenido a tu Windows 365 Cloud PC</h1>
+      </div>
+      <div class="card_description">
+        Disfruta de tu experiencia de Windows en forma
+        segura por streaming desde la nube Microsoft a cualquier dispositivo.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Adquiérelo hoy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-M365-CP-Microsoft365-Commercial?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Microsoft 365 para empresas</h1>
+      </div>
+      <div class="card_description">
+        Mantente a la vanguardia con nuestras poderosas
+        aplicaciones para la productividad, la conexión y la seguridad.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Comprar ahora</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-VisualStudio2019?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Adquiere Visual Studio 2022</h1>
+      </div>
+      <div class="card_description">
+        Descarga Visual Studio 2022, el IDE productivo, moderno e innovador
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Descargar ahora</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card_app">
+      <div class="card_img">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Microsoft-Teams-Commercial?wid=380&hei=213&fit=crop" alt="">
+      </div>
+      <div class="card_title">
+        <h1>Recibe Microsoft Teams gratis</h1>
+      </div>
+      <div class="card_description">
+        Reuniones en línea, chat y almacenamiento compartido en la nube, todo en un mismo lugar.
+      </div>
+      <div class="card_link">
+        <ul>
+          <li><a href="#">Inscríbete gratis</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="social_media">
+    <p>Seguir Microsoft</p>
+    <a href="#">Facebook</a>
+    <a href="#">LinkedIn</a>
+  </div>
+
+  <footer>
+    <div>
+      <div>
+        <ul>
+          Novedades
+          <li><a href="#">Microsoft 365</a></li>
+        </ul>
+      </div>
+
+      <div>
+        Microsoft Store
+        <ul>
+          <li><a href="#">Perfil de la cuenta</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Seguimiento de pedidos</a></li>
+        </ul>
+      </div>
+
+      <div>
+        Educación
+        <ul>
+          <li><a href="#">Microsoft Educación</a></li>
+          <li><a href="#">Dispositivos para el sector educativo</a></li>
+          <li><a href="#">Microsoft Teams para Educación</a></li>
+          <li><a href="#">Microsoft 365 Educación</a></li>
+          <li><a href="#">Office Educación</a></li>
+          <li><a href="#">Entrenamiento y desarrollo para educadores</a></li>
+          <li><a href="#">Ofertas para estudiantes y padres</a></li>
+          <li><a href="#">Azure para estudiantes</a></li>
+        </ul>
+      </div>
+
+      <div>
+        Empresa
+        <ul>
+          <li><a href="#">Microsoft Cloud</a></li>
+          <li><a href="#">Seguridad de Microsoft</a></li>
+          <li><a href="#">Azure</a></li>
+          <li><a href="#">Dynamics 365</a></li>
+          <li><a href="#">Microsoft 365</a></li>
+          <li><a href="#">Microsoft Advertising</a></li>
+          <li><a href="#">Microsoft Manufactura</a></li>
+          <li><a href="#">Microsoft Teams</a></li>
+        </ul>
+      </div>
+
+      <div>
+        Desarrollador y TI
+        <ul>
+          <li><a href="#">Centro de desarrolldores</a></li>
+          <li><a href="#">Documentación</a></li>
+          <li><a href="#">Microsoft Learn</a></li>
+          <li><a href="#">Comunidad de Microsoft Tech</a></li>
+          <li><a href="#">Marketplace de Azure</a></li>
+          <li><a href="#">AppSource</a></li>
+          <li><a href="#">Microsoft Power Platform</a></li>
+          <li><a href="#">Visual Studio</a></li>
+        </ul>
+      </div>
+
+      <div>
+        Compañía
+        <ul>
+          <li><a href="#">Trabajos</a></li>
+          <li><a href="#">Acerca de Microsoft</a></li>
+          <li><a href="#">Privacidad en Microsoft</a></li>
+          <li><a href="#">Inversionistas</a></li>
+          <li><a href="#">Sustentabilidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>Español (República Dominicana)</p>
+      </div>
+      <div>
+        <a href="#">Ponte en contacto con Microsoft</a>
+        <a href="">Privacidad</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Marcas Registadas</a>
+        <a href="">Sobre nuestra publicidad</a>
+        <a href="">&copy; Microsoft 2022</a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="./static/js/script.js" async></script>
+</body>
+
+</html>
