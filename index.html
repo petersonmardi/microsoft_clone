@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Microsoft página principal</title>
+  <link rel="icon" type="image/x-icon" href="./static/img/favicon.png">
   <link rel="stylesheet" href="./static/css/all.min.css">
   <link rel="stylesheet" href="./static/css/style.css">
   <link rel="stylesheet" href="./static/css/media_query.css">
@@ -14,18 +15,28 @@
 <body>
   <!-- <button type="button" name="button" class="">Subir</button> -->
 
-  <!-- <div id="page_top"></div> -->
+  <div class="one two three four five" id="pageTop" style="height: 50px; width: 100%; z-index: 12; position: absolute; top: 55px; color: #333; background-color: red;"></div>
 
   <header class="flex_row text_center">
     <div class="trigger_menu flex_row">
-      <button type="button" name="button" class="menu" id="menu"><i class="fa-solid fa-bars" style="padding-right: 1.6666px;"></i></button>
-      <button type="button" name="button" class="close" id="close"><i class="fa-solid fa-xmark" style="padding-right: 5px;"></i></button>
-      <button type="button" name="button" class="search_btn" id="search_btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="menu" id="menu" type="button" name="button" >
+        <i class="fa-solid fa-bars" style="padding-right: 1.6666px;"></i>
+      </button>
+      <button class="close hide" id="close" type="button" name="button" >
+        <i class="fa-solid fa-xmark" style="padding-right: 5px;"></i>
+      </button>
+      <button class="search_btn" id="search_btn" type="button" name="button" >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
     </div>
 
 
     <div class="flex_row" id="navSectionA">
-      <div href="#" id="logo" class="logo flex_inline"><a href="#"><img src="./static/img/logo.png" alt="Microsoft" width="108" height="23"></a></div>
+      <div href="#" id="logo" class="logo flex_inline">
+        <a href="#">
+          <img src="./static/img/logo.png" alt="Microsoft" width="108" height="23">
+        </a>
+      </div>
 
       <ul class="flex_row list_style_none nav_link">
         <li class="li_cont"><a href="#">Microsoft 365</a></li>
@@ -38,7 +49,8 @@
 
     <div class="" id="navSectionB">
       <ul class="ms_nav flex_row list_style_none">
-        <li class="li_cont dropdown btnBorder" id="msNav">
+        <!-- btnBorder in classList -->
+        <li class="li_cont dropdown" id="msNav">
           <button href="#" class="ms_btn flex_row" >
             <span class="nav_element">Todo Microsoft</span>
             <div class="">
@@ -119,17 +131,17 @@
     </div>
   </div>
 
-  <!-- <div id="" class="">
-    <div class="">
-      <a href="#">Microsoft 365</a>
-      <a href="#">Office</a>
-      <a href="#">Windows</a>
-      <a href="#">Xbox</a>
-      <a href="#">Soporte</a>
-    </div>
+  <div class="sideMenu hide" id="sideMenu">
+    <ul class="sideContent flex_column list_style_none">
+      <li><a href="#">Microsoft 365</a></li>
+      <li><a href="#">Office</a></li>
+      <li><a href="#">Windows</a></li>
+      <li><a href="#">Xbox</a></li>
+      <li><a href="#">Soporte</a></li>
+    </ul>
 
-    <div class="">
-      <div id="" class="">
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="softwareContainer">
         <p>Software</p>
         <div class="">
           <i class="fa-solid fa-caret-up"></i>
@@ -137,7 +149,7 @@
         </div>
       </div>
 
-      <ul class="">
+      <ul class="sideContent sideEl flex_column list_style_none hide" id="software">
         <li><a href="#">Aplicaciones para Windows</a></li>
         <li><a href="#">OneDrive</a></li>
         <li><a href="#">Outlook</a></li>
@@ -146,7 +158,100 @@
         <li><a href="#">Microsoft Teams</a></li>
       </ul>
     </div>
-  </div> -->
+
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="elementIcon">
+        <p>PCs & Devices</p>
+        <div class="">
+          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+
+      <ul class="sideContent sideEl flex_column list_style_none hide">
+        <li><a href="#">Comprar Xbox</a></li>
+      </ul>
+    </div>
+
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="elementIcon">
+        <p>Entrenamiento</p>
+        <div class="">
+          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+
+      <ul class="sideContent sideEl flex_column list_style_none hide">
+        <li><a href="#">Xbox y juegos</a></li>
+        <li><a href="#">Juegos para PC</a></li>
+        <li><a href="#">Juegos para Windows</a></li>
+      </ul>
+    </div>
+
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="elementIcon">
+        <p>Empresas</p>
+        <div class="">
+          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+
+      <ul class="sideContent sideEl flex_column list_style_none hide">
+        <li><a href="#">Microsoft Cloud</a></li>
+        <li><a href="#">Seguridad de Microsoft</a></li>
+        <li><a href="#">Azure</a></li>
+        <li><a href="#">Dynamics 365</a></li>
+        <li><a href="#">Microsoft 365 para empresas</a></li>
+        <li><a href="#">Microsoft Manufactura</a></li>
+        <li><a href="#">Microsoft Power Platform</a></li>
+        <li><a href="#">Windows 365</a></li>
+      </ul>
+    </div>
+
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="elementIcon">
+        <p>Desarrollador y TI</p>
+        <div class="">
+          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+
+      <ul class="sideContent sideEl flex_column list_style_none hide">
+        <li><a href="#">Centro de desarrolldores</a></li>
+        <li><a href="#">Documentación</a></li>
+        <li><a href="#">Microsoft Learn</a></li>
+        <li><a href="#">Comunidad de Microsoft Tech</a></li>
+        <li><a href="#">Marketplace de Azure</a></li>
+        <li><a href="#">AppSource</a></li>
+        <li><a href="#">Visual Studio</a></li>
+      </ul>
+    </div>
+
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="elementIcon">
+        <p>Otros</p>
+        <div class="">
+          <i class="fa-solid fa-caret-up"></i>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+      </div>
+
+      <ul class="sideContent sideEl flex_column list_style_none hide">
+        <li><a href="#">Seguridad y descargas gratuitas</a></li>
+        <li><a href="#">Educación</a></li>
+        <li><a href="#">Licenciamiento</a></li>
+      </ul>
+    </div>
+
+    <div class="sideContent">
+      <div class="elementIcon flex_row" id="elementIcon">
+        <p><a href="#">Ver mapa del sitio</a></p>
+      </div>
+    </div>
+  </div>
 
   <picture>
     <div class="">

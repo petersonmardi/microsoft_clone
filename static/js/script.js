@@ -1,3 +1,5 @@
+var pageTop = document.getElementById('pageTop');
+
 var searchButton = document.getElementById('searchBtn');
 
 var sectionA = document.getElementById('navSectionA');
@@ -18,7 +20,11 @@ var carretUp = document.getElementById('carretUp');
 
 var carretDown = document.getElementById('carretDown');
 
-var dropdown = getElementById('dropdown');
+var menu = document.getElementById('menu');
+
+var close = document.getElementById('close');
+
+var sideMenu = document.getElementById('sideMenu');
 
 function showSearchBar() {
   sectionA.classList.add('msItems');
@@ -26,17 +32,17 @@ function showSearchBar() {
   hideSearchBtn.classList.remove('hide');
 }
 
+searchButton.addEventListener('click', showSearchBar);
+
 function hideSearchBar() {
   sectionA.classList.remove('msItems');
   sectionB.classList.remove('msItems');
   hideSearchBtn.classList.add('hide');
 }
 
-searchButton.addEventListener('click', showSearchBar);
-
 cancelBtn.addEventListener('click', hideSearchBar);
 
-function toggleHideNShow() {
+function dropDown() {
   if (myDropdown.style.display === 'none') {
     myDropdown.style.display = 'block';
     carretDown.style.display = 'none';
@@ -48,8 +54,55 @@ function toggleHideNShow() {
   }
 }
 
-function btnBorder() {
-  dropdown.classList('btnBorder');
+msNav.addEventListener('click', dropDown);
+
+function toggleMenu() {
+  close.classList.remove('hide');
+  sideMenu.classList.remove('hide');
+  menu.classList.add('hide');
 }
 
-msNav.addEventListener('click', toggleHideNShow);
+menu.addEventListener('click', toggleMenu);
+
+function toggleClose() {
+  close.classList.add('hide');
+  sideMenu.classList.add('hide');
+  menu.classList.remove('hide');
+}
+
+close.addEventListener('click', toggleClose);
+
+pageTop.innerHTML = '<p>' + pageTop.classList[2] + '</p>';
+
+function checkClass() {
+  var classes = pageTop.classList;
+  var i;
+  for (i = 0; i < classes.length; i++) {
+    var a = classes[i];
+    if (a === 'two') {
+      pageTop.innerHTML = 'Hello world!' + ' Esta variable es: ' + a;
+    } else {
+      pageTop.innerHTML = 'Hello developer!' + ' Esta variable es: ' + a;
+    }
+  }
+}
+
+checkClass();
+
+var softwareContainer = document.getElementById('softwareContainer');
+
+function menuDown() {
+  var software = document.getElementById('software');
+  var classes = software.classList;
+  var i;
+  for (i = 0; i < classes.length; i++) {
+    var class_ = classes[i];
+    if (class_ === 'hide') {
+      software.classList.remove('hide');
+    } else if (class_ !== 'hide') {
+      software.classList.add('hide');
+    }
+  }
+}
+
+softwareContainer.addEventListener('click', menuDown);

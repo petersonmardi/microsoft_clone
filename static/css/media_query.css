@@ -4,6 +4,7 @@
 
 @media only screen and (min-width: 860px) {
   .trigger_menu {display: none;}
+  .sideMenu {display: none;}
 }
 
 @media only screen and (max-width: 860px) {
@@ -22,7 +23,7 @@
   }
 
   .trigger_menu {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   .ms_nav li:last-child {
@@ -39,6 +40,10 @@
 
   .searchBar {
     display: none;
+  }
+
+  .cartHover {
+    right: 50px;
   }
 
 }
