@@ -128,9 +128,6 @@ header {
   display: none;
 }
 
-.caret_down {
-}
-
 .nav_element {
   margin-right: 10px;
 }
@@ -329,11 +326,12 @@ header {
   margin-bottom: 15px;
 }
 
-.titleSectionB {
-  /* float: left;
-  margin-left: 13px; */
-  all: initial;
-  text-align: left;
+.title--SectionB {
+  position: absolute;
+  float: left;
+  color: #333;
+  margin-left: 38px;
+  margin-top: 35px;
 }
 
 .w11CalltoAction {
@@ -390,8 +388,14 @@ header {
   margin-right: auto;
 }
 
+.contact {
+  margin-bottom: 35px;
+}
+
 .contact p, .contact a{
   margin: 15px 5px 15px 40px;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .contact a {
@@ -498,10 +502,14 @@ footer a:hover {
     flex-direction: column;
   }
 
+  .title--SectionB {
+    margin: -20px 30px;
+  }
+}
+
 @media only screen and (max-width: 560px) {
   .w11, .iosAndroid {
     width: 100%;
     box-shadow: none;
   }
-}
 }
