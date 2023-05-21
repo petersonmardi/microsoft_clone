@@ -6,11 +6,13 @@
     padding: 0;
 }
 
+
 body {
     font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 1.5;
     font-size: 15px;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 .show {
@@ -21,7 +23,9 @@ body {
   display: none;
 }
 
-.flex_inline
+.flex_inline {
+  display: inline;
+}
 
 .flex_column {
   display: flex;
@@ -72,6 +76,9 @@ body {
 header {
   justify-content: space-between;
   align-items: center;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .li_cont {
@@ -202,13 +209,6 @@ header {
   display: block;
 }
 
-.gallery {
-  display: grid;
-  gap: 1rem;
-  grid-auto-rows: 22rem;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-}
-
 .msItems {
   display: none;
 }
@@ -219,6 +219,7 @@ header {
   top: 50px;
   right: 40px;
   box-shadow: 0 2px 1px 0 #000;
+  z-index: 1;
 }
 
 .myDropdown .site {
@@ -258,16 +259,29 @@ header {
   position: absolute;
   width: 100%;
   border-bottom: #333 solid 1px;
+  padding-left: 10px;
 }
 
 .sideContent li {
-  padding: 14px 15px 15px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
+  width: 100%;
+  display: flex;
 }
 
 .sideContent p {
-  padding: 14px 15px 15px;
+  padding: 14px 15px 15px 0; 
   color: #333;
+}
+
+.map {
+  display: flex;
+}
+
+.map a {
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  padding: 14px 15px 15px;
 }
 
 .sideContent a {
@@ -275,12 +289,7 @@ header {
   color: #333;
 
   width: 100%;
-  height: 356px;
-  background-color: blue;
-}
-
-.sideContent a:hover {
-  /* text-decoration: underline; */
+  padding: 14px 15px 15px;
 }
 
 .sideContent:hover {
@@ -296,4 +305,203 @@ header {
   align-items: center;
   padding-right: 24px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.w11 {
+  float: left;
+  position: absolute;
+  top: 200px;
+  width: calc(50% - 350px);
+  margin-left: 8%;
+  color: #ffffff;
+}
+
+.iosAndroid {
+  float: left;
+  position: relative;
+  top: -365px;
+  width: calc(50% - 350px);
+  margin-left: 8%;
+  color: #333333;
+}
+
+.w11Title, .w11Description {
+  margin-bottom: 15px;
+}
+
+.titleSectionB {
+  /* float: left;
+  margin-left: 13px; */
+  all: initial;
+  text-align: left;
+}
+
+.w11CalltoAction {
+  background-color: #0078d7;
+  padding: 10px;
+  border-radius: 3px;
+  width: 175px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w11CalltoAction a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.w11CalltoAction:hover {
+  background-color: #0067b8;
+}
+
+
+.gallery {
+  grid-gap: 1rem;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  margin-top: 55px;
+}
+.card_app {
+  margin-bottom: 45px;
+}
+
+.card_link li a {
+  text-decoration: none;
+  color: #0078d7;
+  font-weight: bold;
+}
+
+.card_link li a:hover {
+  text-decoration: underline;
+}
+
+.card_description {
+  margin-bottom: 15px;
+}
+
+.outlook {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact p, .contact a{
+  margin: 15px 5px 15px 40px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #262626;
+}
+
+footer {
+  background-color: #e6e6e6;
+  color: #262626;
+}
+
+footer a {
+  text-decoration: none;
+  color: #616161;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footerBottom {
+  justify-content: space-between;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 33px;
+}
+
+.theBottom a {
+  padding-left: 25px;
+}
+
+.footerLink {
+  justify-content: space-between;
+  margin-bottom: 135px;
+  margin-top: 75px;
+  padding-top: 33px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-bottom: 50px; */
+}
+
+.footerLink li {
+  margin-bottom: 7px;
+  margin-top: 14px;
+}
+
+.footerLink span {
+  font-weight: bold;
+}
+
+.go-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  background-color: #e6e6e6;  
+}
+
+.go-up a {
+  color: #262626;
+  text-decoration: none;
+}
+
+
+@media only screen and (min-width: 1083px) and (max-width: 1345px) {
+  .w11 {
+    top: 135px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1084px) {
+  .w11, .iosAndroid {
+    top: -50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 95%;
+    margin: auto;
+    padding: 25px;
+    color: #333;
+    background-color: #ffffff;
+    /* border: solid 1px #333; */
+    box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.57);
+  }
+
+  .iosAndroid {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+    picture {
+    display: flex;
+    flex-direction: column;
+  }
+
+@media only screen and (max-width: 560px) {
+  .w11, .iosAndroid {
+    width: 100%;
+    box-shadow: none;
+  }
+}
 }

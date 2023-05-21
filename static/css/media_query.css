@@ -46,4 +46,44 @@
     right: 50px;
   }
 
+  .footerLink {
+    flex-direction: column;
+  }
+
+  .footerLink ul {
+    margin-bottom: 45px;
+  }
 }
+
+@media only screen and (min-width: 560px) and (max-width: 1024px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    /* margin-top: 25px; */
+    margin-bottom: 15px;
+  }
+  .card_app {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 65px; */
+    margin-bottom: 15px;
+  }
+  .card_app {
+    width: 100%;
+  }
+}
+

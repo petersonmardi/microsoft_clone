@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Microsoft página principal</title>
-  <link rel="icon" type="image/x-icon" href="./static/img/favicon.png">
+  <title>Microsoft: página principal</title>
+  <link rel="icon" type="image/x-icon" href="./static/img/icon.png">
+  <!-- <link rel="stylesheet" href="./static/css/core_style.css"> -->
   <link rel="stylesheet" href="./static/css/all.min.css">
   <link rel="stylesheet" href="./static/css/style.css">
   <link rel="stylesheet" href="./static/css/media_query.css">
@@ -15,18 +16,19 @@
 <body>
   <!-- <button type="button" name="button" class="">Subir</button> -->
 
-  <div class="one two three four five" id="pageTop" style="height: 50px; width: 100%; z-index: 12; position: absolute; top: 55px; color: #333; background-color: red;"></div>
+  <!-- <div class="one two three four five" id="pageTop" style="height: 50px; width: 100%; z-index: 12; position: absolute; top: 55px; color: #333; background-color: red;"></div> -->
+  <div id="up"></div>
 
   <header class="flex_row text_center">
     <div class="trigger_menu flex_row">
       <button class="menu" id="menu" type="button" name="button" >
-        <i class="fa-solid fa-bars" style="padding-right: 1.6666px;"></i>
+        <i class="fa-solid fa-bars fa-xl" style="padding-right: 1.6666px;"></i>
       </button>
       <button class="close hide" id="close" type="button" name="button" >
-        <i class="fa-solid fa-xmark" style="padding-right: 5px;"></i>
+        <i class="fa-solid fa-xmark fa-xl" style="padding-right: 5px;"></i>
       </button>
       <button class="search_btn" id="search_btn" type="button" name="button" >
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
       </button>
     </div>
 
@@ -112,14 +114,15 @@
             </div>
           </div>
         </li>
-        <li class="li_cont elementHover" id="searchBtn"><span class="nav_element search">Buscar</span><i class="fa-solid fa-magnifying-glass"></i></li>
+        <li class="li_cont elementHover" id="searchBtn"><span class="nav_element search">Buscar</span><i class="fa-solid fa-magnifying-glass fa-xl"></i></li>
         <div class="glassHover">Busca en Microsoft.com</div>
-        <li class="li_cont elementHover"><a href="#" class=""><span class="nav_element cart">Carro</span><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li class="li_cont elementHover"><a href="#" class=""><span class="nav_element cart">Carro</span><i class="fa-solid fa-cart-shopping fa-xl"></i></a></li>
         <div class="cartHover">0 artículos en el carro de la compra</div>
-        <li class="li_cont"><a href="#" class=""><span class="nav_element user">Iniciar sesión</span><i class="fa-solid fa-circle-user"></i></a></li>
+        <li class="li_cont"><a href="#" class=""><span class="nav_element user">Iniciar sesión</span><i class="fa-solid fa-circle-user fa-xl"></i></a></li>
       </ul>
     </div>
   </header>
+
   <div id="hideSearchBtn" class="searchBar hide">
     <div class="nav-search flex_row">
       <i class="fa-solid fa-arrow-left arrow-left hide"></i>
@@ -144,12 +147,12 @@
       <div class="elementIcon flex_row" id="softwareContainer">
         <p>Software</p>
         <div class="">
-          <i class="fa-solid fa-caret-up"></i>
-          <i class="fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-caret-up hide" id="caretUp"></i>
+          <i class="fa-solid fa-caret-down" id="caretDown"></i>
         </div>
       </div>
 
-      <ul class="sideContent sideEl flex_column list_style_none hide" id="software">
+      <ul class="sideContent sideEl flex_column list_style_none" id="software" style="display: none;">
         <li><a href="#">Aplicaciones para Windows</a></li>
         <li><a href="#">OneDrive</a></li>
         <li><a href="#">Outlook</a></li>
@@ -160,29 +163,29 @@
     </div>
 
     <div class="sideContent">
-      <div class="elementIcon flex_row" id="elementIcon">
+      <div class="elementIcon flex_row" id="deviceContainer">
         <p>PCs & Devices</p>
         <div class="">
-          <i class="fa-solid fa-caret-up"></i>
-          <i class="fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-caret-up hide" id="deviceArrowUp"></i>
+          <i class="fa-solid fa-caret-down" id="deviceArrowDown"></i>
         </div>
       </div>
 
-      <ul class="sideContent sideEl flex_column list_style_none hide">
+      <ul class="sideContent sideEl flex_column list_style_none" id="device" style="display: none;">
         <li><a href="#">Comprar Xbox</a></li>
       </ul>
     </div>
 
     <div class="sideContent">
-      <div class="elementIcon flex_row" id="elementIcon">
+      <div class="elementIcon flex_row" id="entertainmentContainer">
         <p>Entrenamiento</p>
         <div class="">
-          <i class="fa-solid fa-caret-up"></i>
-          <i class="fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-caret-up hide" id="entertainmetArrowUp"></i>
+          <i class="fa-solid fa-caret-down" id="entertainmetArrowDown"></i>
         </div>
       </div>
 
-      <ul class="sideContent sideEl flex_column list_style_none hide">
+      <ul class="sideContent sideEl flex_column list_style_none" style="display: none;" id="entertainment">
         <li><a href="#">Xbox y juegos</a></li>
         <li><a href="#">Juegos para PC</a></li>
         <li><a href="#">Juegos para Windows</a></li>
@@ -190,15 +193,15 @@
     </div>
 
     <div class="sideContent">
-      <div class="elementIcon flex_row" id="elementIcon">
+      <div class="elementIcon flex_row" id="businessContainer">
         <p>Empresas</p>
         <div class="">
-          <i class="fa-solid fa-caret-up"></i>
-          <i class="fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-caret-up hide" id="businessArrowUp"></i>
+          <i class="fa-solid fa-caret-down" id="businessArrowDown"></i>
         </div>
       </div>
 
-      <ul class="sideContent sideEl flex_column list_style_none hide">
+      <ul class="sideContent sideEl flex_column list_style_none" style="display: none;" id="business">
         <li><a href="#">Microsoft Cloud</a></li>
         <li><a href="#">Seguridad de Microsoft</a></li>
         <li><a href="#">Azure</a></li>
@@ -211,15 +214,15 @@
     </div>
 
     <div class="sideContent">
-      <div class="elementIcon flex_row" id="elementIcon">
+      <div class="elementIcon flex_row" id="developerContainer">
         <p>Desarrollador y TI</p>
         <div class="">
-          <i class="fa-solid fa-caret-up"></i>
-          <i class="fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-caret-up hide" id="developerArrowUp"></i>
+          <i class="fa-solid fa-caret-down" id="developerArrowDown"></i>
         </div>
       </div>
 
-      <ul class="sideContent sideEl flex_column list_style_none hide">
+      <ul class="sideContent sideEl flex_column list_style_none" id="developer" style="display: none;">
         <li><a href="#">Centro de desarrolldores</a></li>
         <li><a href="#">Documentación</a></li>
         <li><a href="#">Microsoft Learn</a></li>
@@ -231,48 +234,46 @@
     </div>
 
     <div class="sideContent">
-      <div class="elementIcon flex_row" id="elementIcon">
+      <div class="elementIcon flex_row" id="otherContainer">
         <p>Otros</p>
         <div class="">
-          <i class="fa-solid fa-caret-up"></i>
-          <i class="fa-solid fa-caret-down"></i>
+          <i class="fa-solid fa-caret-up hide" id="otherArrowUp"></i>
+          <i class="fa-solid fa-caret-down" id="otherArrowDown"></i>
         </div>
       </div>
 
-      <ul class="sideContent sideEl flex_column list_style_none hide">
+      <ul class="sideContent sideEl flex_column list_style_none" id="other" style="display: none;">
         <li><a href="#">Seguridad y descargas gratuitas</a></li>
         <li><a href="#">Educación</a></li>
         <li><a href="#">Licenciamiento</a></li>
       </ul>
     </div>
 
+    <p class="map"><a href="#">Ver mapa del sitio</a></p>
     <div class="sideContent">
-      <div class="elementIcon flex_row" id="elementIcon">
-        <p><a href="#">Ver mapa del sitio</a></p>
-      </div>
     </div>
   </div>
 
   <picture>
-    <div class="">
-      <a href="#">
-        <img src="./static/img/Windows11_1920x600.jpeg" alt="Windows 11" class="" width="100%">
+    <div class="msImg">
+      <a class="MSDesktop" id="msDesktop" href="#">
+        <img class="desktopImage" id="desktopImage" src="./static/img/Windows11_1920x600.jpeg" alt="Windows 11" class="" width="100%">
       </a>
     </div>
-    <div class="">
-      <h1 class="">Diseñado para la vida de hoy y de mañana</h1>
-      <div class="">
+    <div class="w11">
+      <h1 class="w11Title">Diseñado para la vida de hoy y de mañana</h1>
+      <div class="w11Description">
         La nueva generación de juegos. tus objetivos. Familia y amigos.
         Windows 11 está hecho para acercarte a todo lo que te encanta.
       </div>
-      <div class=""><a href="#">Ve si tu PC está listo</a></div>
+      <div class="w11CalltoAction"><a href="#">Ve si tu PC está listo</a></div>
     </div>
   </picture>
 
   <section class="section_a gallery">
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-m365-icons-7up-1668x940?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-m365-icons-7up-1668x940?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Microsoft 365</h1>
@@ -282,7 +283,7 @@
         seguridad avanzada y mucho más, todo en una conveniente suscripción única.
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Para 1 persona</a></li>
           <li><a href="#">Hasta 6 personas</a></li>
         </ul>
@@ -291,7 +292,7 @@
 
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-MSFT-CP-Edge?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Microsoft Edge</h1>
@@ -301,7 +302,7 @@
         productividad y más valor mientras navegas.
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Descargar ahora</a></li>
         </ul>
       </div>
@@ -309,7 +310,7 @@
 
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Soft-CP-OneDriveCampaignRefresh-2?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Microsoft OneDrive</h1>
@@ -319,15 +320,15 @@
         cualquier dispositivo y en cualquier lugar.
       </div>
       <div class="card_link">
-        <ul>
-          <li><a href="#">Más información</a></li>
+        <ul class="list_style_none">
+            <li><a href="#">Más información</a></li>
         </ul>
-      </div>
+    </div>
     </div>
 
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-PC-SMB-OneNote?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-PC-SMB-OneNote?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>OneNote</h1>
@@ -336,7 +337,7 @@
         Organiza tus notas y tu vida.
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Más indormación</a></li>
         </ul>
       </div>
@@ -346,23 +347,26 @@
   <picture>
     <div class="outlook">
       <a href="#">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Hero-MSCOM-Outlook-iOS-Android:VP5-1596x600" alt="Windows 11">
+        <img class="img" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Hero-MSCOM-Outlook-iOS-Android:VP5-1596x600" alt="Windows 11" width="100%">
       </a>
     </div>
-    <div class="text_wrapper">
-      <h1 class="title">Outlook para iOS y Android</h1>
-      <div class="description">
+    <div class="text_wrapper iosAndroid">
+      <h1 class="title w11Title">Outlook para iOS y Android</h1>
+      <div class="description w11Description">
         Conecta. Organiza. Haz las cosas.
       </div>
-      <div class="link"><a href="#">Descargar ahora</a></div>
+      <div class="link w11CalltoAction"><a href="#">Descargar ahora</a></div>
     </div>
   </picture>
 
-  <h1>Para la empresa</h1>
+  <div class="titleSectionB"> 
+    <h1 >Para la empresa</h1>
+  </div>
+
   <section class="section_b gallery">
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/JIC-DPS-CP01?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/JIC-DPS-CP01?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Bienvenido a tu Windows 365 Cloud PC</h1>
@@ -372,7 +376,7 @@
         segura por streaming desde la nube Microsoft a cualquier dispositivo.
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Adquiérelo hoy</a></li>
         </ul>
       </div>
@@ -380,7 +384,7 @@
 
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-M365-CP-Microsoft365-Commercial?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-M365-CP-Microsoft365-Commercial?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Microsoft 365 para empresas</h1>
@@ -390,7 +394,7 @@
         aplicaciones para la productividad, la conexión y la seguridad.
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Comprar ahora</a></li>
         </ul>
       </div>
@@ -398,7 +402,7 @@
 
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-VisualStudio2019?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-VisualStudio2019?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Adquiere Visual Studio 2022</h1>
@@ -407,7 +411,7 @@
         Descarga Visual Studio 2022, el IDE productivo, moderno e innovador
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Descargar ahora</a></li>
         </ul>
       </div>
@@ -415,7 +419,7 @@
 
     <div class="card_app">
       <div class="card_img">
-        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Microsoft-Teams-Commercial?wid=380&hei=213&fit=crop" alt="">
+        <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Microsoft-Teams-Commercial?wid=380&hei=213&fit=crop" alt="" width="100%">
       </div>
       <div class="card_title">
         <h1>Recibe Microsoft Teams gratis</h1>
@@ -424,40 +428,40 @@
         Reuniones en línea, chat y almacenamiento compartido en la nube, todo en un mismo lugar.
       </div>
       <div class="card_link">
-        <ul>
+        <ul class="list_style_none">
           <li><a href="#">Inscríbete gratis</a></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <div class="social_media">
+  <div class="social_media flex_row contact">
     <p>Seguir Microsoft</p>
-    <a href="#">Facebook</a>
-    <a href="#">LinkedIn</a>
+    <a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
   </div>
 
-  <footer>
-    <div>
-      <div>
-        <ul>
-          Novedades
+  <footer class="flex_column">
+    <div class="flex_row footerLink">
+      <div class="groupLink">
+        <span>Novedades</span>
+        <ul class="list_style_none">
           <li><a href="#">Microsoft 365</a></li>
         </ul>
       </div>
 
-      <div>
-        Microsoft Store
-        <ul>
+      <div class="groupLink">
+        <span>Microsoft Store</span>
+        <ul class="list_style_none flex_column">
           <li><a href="#">Perfil de la cuenta</a></li>
           <li><a href="#">Devoluciones</a></li>
           <li><a href="#">Seguimiento de pedidos</a></li>
         </ul>
       </div>
 
-      <div>
-        Educación
-        <ul>
+      <div class="groupLink">
+        <span>Educación</span>
+        <ul class="list_style_none">
           <li><a href="#">Microsoft Educación</a></li>
           <li><a href="#">Dispositivos para el sector educativo</a></li>
           <li><a href="#">Microsoft Teams para Educación</a></li>
@@ -469,9 +473,9 @@
         </ul>
       </div>
 
-      <div>
-        Empresa
-        <ul>
+      <div class="groupLink">
+        <span>Empresa</span>
+        <ul class="list_style_none">
           <li><a href="#">Microsoft Cloud</a></li>
           <li><a href="#">Seguridad de Microsoft</a></li>
           <li><a href="#">Azure</a></li>
@@ -483,9 +487,9 @@
         </ul>
       </div>
 
-      <div>
-        Desarrollador y TI
-        <ul>
+      <div class="groupLink">
+        <span>Desarrollador y TI</span>
+        <ul class="list_style_none">
           <li><a href="#">Centro de desarrolldores</a></li>
           <li><a href="#">Documentación</a></li>
           <li><a href="#">Microsoft Learn</a></li>
@@ -497,9 +501,9 @@
         </ul>
       </div>
 
-      <div>
-        Compañía
-        <ul>
+      <div class="groupLink">
+        <span>Compañía</span>
+        <ul class="list_style_none">
           <li><a href="#">Trabajos</a></li>
           <li><a href="#">Acerca de Microsoft</a></li>
           <li><a href="#">Privacidad en Microsoft</a></li>
@@ -508,11 +512,11 @@
         </ul>
       </div>
     </div>
-    <div>
+    <div class="flex_row footerBottom" >
       <div>
-        <p>Español (República Dominicana)</p>
+        <p><i class="fa-solid fa-earth-americas fa-xl"></i> Español (República Dominicana)</p>
       </div>
-      <div>
+      <div class="flex_row theBottom">
         <a href="#">Ponte en contacto con Microsoft</a>
         <a href="">Privacidad</a>
         <a href="#">Aviso legal</a>
@@ -522,6 +526,7 @@
       </div>
     </div>
   </footer>
+  
   <script type="text/javascript" src="./static/js/script.js" async></script>
 </body>
 
